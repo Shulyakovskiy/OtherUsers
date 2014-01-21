@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2204B55B-427F-4922-8E3D-90DB891E373B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Willow.Kermit</RootNamespace>
+    <AssemblyName>Willow.Kermit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro, Version=1.5.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Caliburn.Micro.1.5.2\lib\net45\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Caliburn.Micro.1.5.2\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Child\Converters\AgeConverter.cs" />
+    <Compile Include="Child\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Child\Converters\GenderConverter.cs" />
+    <Compile Include="Child\Converters\InvertBooleanConverter.cs" />
+    <Compile Include="Child\Converters\RelationTypeConverter.cs" />
+    <Compile Include="Child\Exports\NewChildFactory.cs" />
+    <Compile Include="Child\ViewModels\ChildOverviewViewModel.cs" />
+    <Compile Include="Child\ViewModels\ChildVisualCardViewModel.cs" />
+    <Compile Include="Child\ViewModels\EditChildViewModel.cs" />
+    <Compile Include="Child\ViewModels\GezinViewModel.cs" />
+    <Compile Include="Child\ViewModels\IChildInfoPanel.cs" />
+    <Compile Include="Child\Views\ChildOverviewView.xaml.cs">
+      <DependentUpon>ChildOverviewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Child\Views\ChildVisualCardView.xaml.cs">
+      <DependentUpon>ChildVisualCardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Child\Views\EditChildView.xaml.cs">
+      <DependentUpon>EditChildView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Child\Views\GezinView.xaml.cs">
+      <DependentUpon>GezinView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Child\Views\RelationListView.xaml.cs">
+      <DependentUpon>RelationListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Child\Views\RelationVisualCardView.xaml.cs">
+      <DependentUpon>RelationVisualCardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Controls\ImageButton.xaml.cs">
+      <DependentUpon>ImageButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Interfaces\ISearchResults.cs" />
+    <Compile Include="General\Interfaces\ITabViewModelFactory.cs" />
+    <Compile Include="General\Messages\CloseTabMessage.cs" />
+    <Compile Include="General\Messages\ICloseTabMessage.cs" />
+    <Compile Include="General\Messages\IShowHomeMessage.cs" />
+    <Compile Include="General\Messages\IShowTabViewMessage.cs" />
+    <Compile Include="General\Messages\ShowHomeMessage.cs" />
+    <Compile Include="General\Messages\ShowTabViewMessage.cs" />
+    <Compile Include="General\ViewModels\ImageButton.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\ClientFactory.cs" />
+    <Compile Include="Model\DefaultBabyImage.cs" />
+    <Compile Include="Model\Family.cs" />
+    <Compile Include="Model\FamilyFactory.cs" />
+    <Compile Include="Model\Gender.cs" />
+    <Compile Include="Model\Relation.cs" />
+    <Compile Include="Model\RelationFactory.cs" />
+    <Compile Include="Reflection\AccessorCache.cs" />
+    <Compile Include="Reflection\DynamicMethodGenerator.cs" />
+    <Compile Include="Reflection\GetterSetter.cs" />
+    <Compile Include="Reflection\GetterSetterAccessor.cs" />
+    <Compile Include="Reflection\InstanceReflectionWrapper.cs" />
+    <Compile Include="Reflection\MethodCache.cs" />
+    <Compile Include="Reflection\MethodKey.cs" />
+    <Compile Include="Reflection\ReflectedInstance.cs" />
+    <Compile Include="Reflection\ReflectedType.cs" />
+    <Compile Include="Reflection\StaticReflectionWrapper.cs" />
+    <Compile Include="Search\Exports\SearchResultsViewModelFactory.cs" />
+    <Compile Include="SocialWorkers\Exports\SocialWorkersViewModelFactory.cs" />
+    <Compile Include="Util\Container.cs" />
+    <Compile Include="Util\ContainerFactory.cs" />
+    <Compile Include="Util\ImageGetter.cs" />
+    <Compile Include="Util\IUriResolver.cs" />
+    <Compile Include="Util\PathLocator.cs" />
+    <Compile Include="Util\ServiceLocator.cs" />
+    <Compile Include="Util\UriResolver.cs" />
+    <Compile Include="Util\WindowsSecurity.cs" />
+    <Compile Include="General\ViewModels\ActionTabsViewModel.cs" />
+    <Compile Include="General\ViewModels\ArtViewModel.cs" />
+    <Compile Include="General\ViewModels\HomeViewModel.cs" />
+    <Compile Include="General\Interfaces\IActionTabsViewModel.cs" />
+    <Compile Include="General\Interfaces\IArtViewModel.cs" />
+    <Compile Include="General\Interfaces\IHomeViewModel.cs" />
+    <Compile Include="General\Interfaces\INavigationViewModel.cs" />
+    <Compile Include="Child\Interfaces\INewChildViewModel.cs" />
+    <Compile Include="Search\Interfaces\ISearchResultsViewModel.cs" />
+    <Compile Include="General\Interfaces\ISearchViewModel.cs" />
+    <Compile Include="Shell\Interfaces\IShellViewModel.cs" />
+    <Compile Include="SocialWorkers\Interfaces\ISocialWorkersViewModel.cs" />
+    <Compile Include="General\Interfaces\IStatusViewModel.cs" />
+    <Compile Include="General\Interfaces\ITabViewModel.cs" />
+    <Compile Include="General\ViewModels\NavigationViewModel.cs" />
+    <Compile Include="Child\ViewModels\ChildViewModel.cs" />
+    <Compile Include="Search\ViewModels\SearchResultsViewModel.cs" />
+    <Compile Include="General\ViewModels\SearchViewModel.cs" />
+    <Compile Include="Shell\ViewModels\ShellViewModel.cs" />
+    <Compile Include="Shell\Interfaces\IShell.cs" />
+    <Compile Include="SocialWorkers\ViewModels\SocialWorkersViewModel.cs" />
+    <Compile Include="General\ViewModels\StatusViewModel.cs" />
+    <Compile Include="General\Views\ActionTabsView.xaml.cs">
+      <DependentUpon>ActionTabsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Views\ArtView.xaml.cs">
+      <DependentUpon>ArtView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Views\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Views\NavigationView.xaml.cs">
+      <DependentUpon>NavigationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Child\Views\ChildView.xaml.cs">
+      <DependentUpon>ChildView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Views\SearchResultsView.xaml.cs">
+      <DependentUpon>SearchResultsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Views\SearchView.xaml.cs">
+      <DependentUpon>SearchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SocialWorkers\Views\SocialWorkersView.xaml.cs">
+      <DependentUpon>SocialWorkersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Views\StatusView.xaml.cs">
+      <DependentUpon>StatusView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Child\Views\ChildOverviewView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Child\Views\ChildVisualCardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Child\Views\EditChildView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Child\Views\GezinView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Child\Views\RelationListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Child\Views\RelationVisualCardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Expander.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Controls\ImageButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="General\Views\ActionTabsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Views\ArtView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Views\NavigationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Child\Views\ChildView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search\Views\SearchResultsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Views\SearchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shell\Views\ShellView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SocialWorkers\Views\SocialWorkersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Views\StatusView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Kermit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Kermit.ico" />
+    <Content Include="Resources\Baby.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Search_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Baby_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Doctor_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Woman.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sister.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BabyBoy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BabyGirl.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Brother.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Calendar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Daddy.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Doctor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Help.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Jaidee.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Help.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Home.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\LeftArrowBlue.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\LeftArrowGrey.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Mommy.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Man.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\RightArrowBlue.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\RightArrowGrey.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\SearchIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Search.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Settings.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

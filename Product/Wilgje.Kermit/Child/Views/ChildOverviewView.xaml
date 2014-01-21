@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Willow.Kermit.Child.Views.ChildOverviewView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <StackPanel Orientation="Vertical">
+        <StackPanel Name="NamePanel" Orientation="Vertical" Background="{StaticResource KermitBrush}" Margin="0,0,0,8">
+            <StackPanel Orientation="Horizontal">
+                <Label MinWidth="100" Content="Naam"/>
+                <Label Name="FullName" MinWidth="100" Content="Jantje Van Achter De Hoek" Opacity="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label MinWidth="100" Content="Geboortedatum"/>
+                <Label Name="DateOfBirth" MinWidth="100"  Content="15 september 2011"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label MinWidth="100" Content="Geboorteplaats"/>
+                <Label Name="Birthplace" MinWidth="100"  Content="Brugge"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Name="GenderPanel" Orientation="Horizontal" Background="{StaticResource KermitBrush}" Margin="0,0,0,8">
+            <Label MinWidth="100" Content="Geslacht"/>
+            <Label Name="Geslacht" Content="Jongen"/>
+        </StackPanel>
+        <StackPanel Name="EmergencyPanel" Orientation="Vertical" Background="{StaticResource KermitBrush}" Margin="0,0,0,8">
+            <Label Name="Noodnummers" MinWidth="100" Content="Noodnummers" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+            <TextBlock Text="--- Geen noodnummers bekend ---"  Margin="0,0,0,4" />
+        </StackPanel>
+        <StackPanel Name="MedicalPanel" Orientation="Vertical" Background="{StaticResource KermitBrush}" Margin="0,0,0,8">
+            <Label Name="Huisarts" MinWidth="100" Content="Artsen" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+            <TextBlock Text="--- Geen huisarts bekend ---"  Margin="0,0,0,4" />
+        </StackPanel>
+        <StackPanel Name="Permissions" Orientation="Vertical" Background="{StaticResource KermitBrush}" Margin="0,0,0,8">
+            <Label Name="Toestemmingen" MinWidth="100" Content="Toestemmingen" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+            <TextBlock Text="Mag gefotografeerd worden" />
+            <TextBlock Text="Mag mee op uitstappen" />
+            <TextBlock Text="Mag verzorgd worden door verzorgers in opleiding" Margin="0,0,0,4" />
+        </StackPanel>
+    </StackPanel>
+
+</UserControl>
