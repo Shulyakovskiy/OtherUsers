@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ServiceForMedialogia_WithSimpleLogics.FibonacchiService" CodeBehind="FibonacchiService.svc.cs" %>

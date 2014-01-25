@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e8f942fd-6811-40b7-be99-44576dadf777" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2426/FibonacchiService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FibonacchiService.xsd" MetadataType="Schema" ID="d8108a53-a1e6-4aac-aa64-1709d0ebb4a3" SourceId="1" SourceUrl="http://localhost:2426/FibonacchiService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FibonacchiService.wsdl" MetadataType="Wsdl" ID="493d51a9-8ab5-4242-9347-89fa82d44fab" SourceId="1" SourceUrl="http://localhost:2426/FibonacchiService.svc?wsdl" />
+    <MetadataFile FileName="FibonacchiService1.wsdl" MetadataType="Wsdl" ID="7b5df34e-727c-4556-b9af-d9353144dd00" SourceId="1" SourceUrl="http://localhost:2426/FibonacchiService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="FibonacchiService.disco" MetadataType="Disco" ID="5f6cb7ea-481e-41e5-8a7a-be36ad169a62" SourceId="1" SourceUrl="http://localhost:2426/FibonacchiService.svc?disco" />
+    <MetadataFile FileName="FibonacchiService1.xsd" MetadataType="Schema" ID="42b0e80e-bcda-4fd6-94cc-b3b3dbccb5ea" SourceId="1" SourceUrl="http://localhost:2426/FibonacchiService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
